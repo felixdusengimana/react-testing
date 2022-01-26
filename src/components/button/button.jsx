@@ -2,7 +2,7 @@ import React from "react"
 import "./button.css"
 
 const Button = ({ label }) => {
-  return <div data-testid="button" className="button-style">{label}</div>
+  return <button data-testid="button" className="button-style" onClick={()=>alert("Hi")}>{label}</button>
 }
 
 export default Button
