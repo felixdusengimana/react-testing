@@ -1,4 +1,4 @@
-import "react"
+import React from "react"
 import "./button.css"
 
 const Button = ({ label }) => {
