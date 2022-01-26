@@ -33,7 +33,7 @@ function List({ refresh, name }) {
     async function load() {
       setLoading(true);
       try {
-        const r = await axios.get(`http://localhost:3600/api/photos?name=${name}`);
+        const r = await axios.get(`https://photosserver.herokuapp.com/api/photos?name=${name}`);
 
         setPhotos(r.data);
         setError('');
@@ -104,7 +104,7 @@ function PhotoDetail({ photo }) {
           onClick={() => {
             // we already have an example with .catch for this video :)
             void axios
-              .post('https://localhosts:3600/api/favourite', { ...photo, favourite })
+              .post('https://photosserver.herokuapp.com/api/favourite', { ...photo, favourite })
               .then((response) => {
                 setFavourite(response.data.favourite);
               });
